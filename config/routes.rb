@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   get 'static_content/start'
 
   get 'static_content/about', :as => 'about'
