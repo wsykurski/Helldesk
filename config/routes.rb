@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get 'static_content/start'
+
+  get 'static_content/about'
+
+  get 'static_content/help'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'static_content#start', :as => 'welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
