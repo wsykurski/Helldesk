@@ -1,0 +1,47 @@
+#top_menu{
+    position: fixed;
+    width: 80%;
+    background-color: pink;
+    left: 10%;
+    top: 0;
+                  
+    ul{
+        list-style: none;
+        overflow: hiden;
+    }
+    li{
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+
+    #right_menu{
+        li{
+            float: right;
+            a{
+                padding-right: 1em;
+            }
+        }
+    }
+
+    #left_menu{
+        li{
+            float: left;
+            a{
+                padding-right: 2em;
+                margin-left: -1em;
+            }
+        }
+    }
+}
+
+#page_content{
+    padding-top: 3em;
+    margin-left: 10%;
+    width: 80%;
+    color: light-gray;
+}
