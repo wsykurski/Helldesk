@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'static_content/start'
 
-  get 'static_content/about'
+  get 'static_content/about', :as => 'about'
 
-  get 'static_content/help'
+  get 'static_content/help', :as => 'help'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
