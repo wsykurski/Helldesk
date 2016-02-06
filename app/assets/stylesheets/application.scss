@@ -1,10 +1,28 @@
+html,body{
+    height: 100%;
+}
 #top_menu{
     position: fixed;
-    width: 80%;
+    width: 86%;
+    height: 3em;
     background-color: pink;
-    left: 10%;
+    left: 7%;
     top: 0;
+    border-radius: 25px;
+    
+    /* Top menu colors and gradient*/
+    background: -moz-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,0,0,0.85)), color-stop(100%, rgba(130,7,7,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(322deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* ie10+ */
+    background: linear-gradient(128deg, rgba(0,0,0,0.85) 0%, rgba(130,7,7,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#820707',GradientType=1 ); /* ie6-9 */
                   
+    /* Top menu shadows*/
+    -moz-box-shadow: 22px 10px 20px #570d0d;
+    -webkit-box-shadow: 22px 10px 20px #570d0d;
+    box-shadow: 22px 10px 20px #570d0d;
     ul{
         list-style: none;
         overflow: hiden;
@@ -29,6 +47,7 @@
     }
 
     #left_menu{
+        margin-left: 1em;
         li{
             float: left;
             a{
@@ -40,8 +59,14 @@
 }
 
 #page_content{
-    padding-top: 3em;
+    margin-top: 4em;
     margin-left: 10%;
+    padding-bottom: 1em;
     width: 80%;
-    color: light-gray;
+    background-color: lightgrey;
+    border-radius: 25px;
+    #page_box{
+        padding-top: 1px;
+        margin-left: 1em;
+    }
 }
