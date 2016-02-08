@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy#, :as =>:logout
   end
 
+  controller :notes do
+    post 'add_note' => :create
+    get 'add_note' => :new
+  end
+
   get 'sessions/create'
   get 'sessions/destroy'
 
