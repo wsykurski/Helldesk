@@ -6,4 +6,12 @@ module IssuesHelper
       value.to_s
     end
   end
+
+  def remove_nils(value)
+    if value.nil?
+      'none'
+    else
+      value
+    end
+  end
 end

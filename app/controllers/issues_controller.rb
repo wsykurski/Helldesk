@@ -4,13 +4,12 @@ class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.json
   def index
-    @issues = Issue.all
+    @issues = Issue.order(:title)
   end
 
   # GET /issues/1
   # GET /issues/1.json
   def show
-    @user_name = User.find_by_id(@issue.creator_id).name
   end
 
   # GET /issues/new

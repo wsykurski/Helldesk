@@ -7,16 +7,27 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th colspan="3">Actions</th>
+      <th>Creator</th>
+      <th>Assigned to</th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @issues.each do |issue| %>
       <tr>
-        <td><%= issue.title %></td>
+        <td><%= link_to issue.title, issue %></td>
         <td><%= cut_string(issue.description) %></td>
-        <td><%= link_to 'Show', issue %></td>
+        <% unless issue.creator.nil? %>
+            <td><%= remove_nils(issue.creator.name) %></td>
+        <% else %>
+            <td>Unknown</td>
+        <% end %>
+        <% unless issue.assigned.nil? %>
+            <td><%= remove_nils(issue.assigned.name) %></td>
+        <% else %>
+            <td>Not Assigned</td>
+        <% end %>
         <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
         <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
