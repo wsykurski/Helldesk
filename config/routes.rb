@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  resources :issues
 #  get 'sessions/new'
 #  get 'sessions/create'
 #  get 'sessions/destroy'
 
   controller :sessions do
-    get 'login' => :new, :as => :login
+    get 'login' => :new#, :as => :login
     post 'login' => :create
-    delete 'logout' => :destroy, :as =>:logout
+    delete 'logout' => :destroy#, :as =>:logout
   end
 
   get 'sessions/create'

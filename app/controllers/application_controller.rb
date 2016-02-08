@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected 
 
   def authorize
-    unless @User = User.find_by(id: session[:user_id])
+    unless @current_user = User.find_by(id: session[:user_id])
       redirect_to login_url, notice: "Must logon !!!"
     end
   end

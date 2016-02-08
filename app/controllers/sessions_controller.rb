@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to users_url, :notice => "You loged in"
     else
-      redirect_to login_url, :alert => "Failed Login! Try again:"
+      redirect_to login_url, :alert => "Do you feel lucky, punk?"
     end
   end
 

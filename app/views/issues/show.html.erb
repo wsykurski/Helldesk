@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @issue.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @issue.description %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @issue.creator.name %>
+</p>
+
+<div id="ShowActionsMenu">
+    <ul>
+        <li> <%= link_to 'Edit |', edit_issue_path(@issue) %> </li>
+        <li> <%= link_to 'Back ', issues_path %> </li>
+    </ul>
+</div>
+
