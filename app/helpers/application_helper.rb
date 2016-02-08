@@ -15,4 +15,8 @@ module ApplicationHelper
       link_to 'Login', :login
     end
   end
+
+  def add_new_lines(text)
+    (h text).gsub(/\n/, "<br />").html_safe
+  end
 end
