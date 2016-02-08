@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_title
 
   # GET /users
   # GET /users.json
@@ -72,5 +73,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation, :salt)
       
+    end
+
+    def set_title
+      @title = 'Users'
+      puts @title
     end
 end

@@ -1,5 +1,6 @@
 class IssuesController < ApplicationController
   before_action :set_issue, only: [:show, :edit, :update, :destroy]
+  before_action :provide_title
 
   # GET /issues
   # GET /issues.json
@@ -70,5 +71,9 @@ class IssuesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_params
       params.require(:issue).permit(:title, :description, :creator_id)
+    end
+
+    def provide_title
+      @title = 'Issues'
     end
 end

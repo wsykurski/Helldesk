@@ -1,6 +1,9 @@
 module ApplicationHelper
   def provide_title(subtitle='')
     hell = "Helldesk"
+    unless @title.nil?
+      hell = hell + " | " + @title
+    end
     if subtitle.empty?
       hell
     else

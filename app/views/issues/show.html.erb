@@ -1,20 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<h1> <font color="darkred"> Title: </font> <%= @issue.title %></h1>
+<hr/>
 <p>
-  <strong>Title:</strong>
-  <%= @issue.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
+  <strong><font color="darkred">Description:</font></strong><br/>
   <%= add_new_lines(@issue.description) %>
 </p>
-
+<hr/>
 <p>
-  <strong>Creator:</strong>
+    <strong><font color="darkred">Creator:</font></strong>
   <%= @issue.creator.name %>
 </p>
-
+<hr/>
 <div id="ShowActionsMenu">
     <ul>
         <li> <%= link_to 'Edit |', edit_issue_path(@issue) %> </li>
