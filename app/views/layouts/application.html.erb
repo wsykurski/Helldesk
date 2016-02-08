@@ -12,6 +12,11 @@
         <div id="page_box">
             <%= yield %>
         </div>
+        <p>
+            <%if @User%>
+                Welcome in Hell, dear <%=@User.name%>
+            <%end%>
+        </p>
     </div>
 
 </body>

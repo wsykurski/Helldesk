@@ -1,22 +1,29 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+#  get 'sessions/new'
+#  get 'sessions/create'
+#  get 'sessions/destroy'
+
+  controller :sessions do
+    get 'login' => :new, :as => :login
+    post 'login' => :create
+    delete 'logout' => :destroy, :as =>:logout
+  end
 
   get 'sessions/create'
-
   get 'sessions/destroy'
 
   resources :users
   get 'static_content/start'
 
-  get 'static_content/about', :as => 'about'
+  get 'static_content/about', :as => :about
 
-  get 'static_content/help', :as => 'help'
+  get 'static_content/help', :as => :help
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_content#start', :as => 'welcome'
+  root 'static_content#start', :as => :welcome
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,8 +1,5 @@
 @import "users";
-html,body{
-    height: 100%;
-    word-wrap: break-word;
-}
+@import "sessions";
 #top_menu{
     position: fixed;
     width: 86%;
@@ -70,6 +67,6 @@ html,body{
     word-wrap: break-word;
     #page_box{
         padding-top: 1px;
-        margin-left: 1em;
+        padding-left: 1em;
     }
 }
