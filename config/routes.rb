@@ -15,15 +15,20 @@ Rails.application.routes.draw do
     get 'add_note' => :new
   end
 
-  get 'sessions/create'
-  get 'sessions/destroy'
+#  get 'sessions/create'
+#  get 'sessions/destroy'
 
   resources :users
-  get 'static_content/start'
-
-  get 'static_content/about', :as => :about
-
-  get 'static_content/help', :as => :help
+#  get 'static_content/start'
+#
+#  get 'static_content/about', :as => :about
+#
+#  get 'static_content/help', :as => :help
+  controller :static_content do
+    get 'start' => :start
+    get 'help' => :help
+    get 'about' => :about
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

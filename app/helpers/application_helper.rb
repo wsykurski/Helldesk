@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def login_logout
-    if @current_user
+    if @current_user 
       link_to 'Logout', :logout, :method => :delete
     else
       link_to 'Login', :login

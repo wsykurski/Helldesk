@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def admin?
+    return self.admin == true
+  end
+
 
   private
 
