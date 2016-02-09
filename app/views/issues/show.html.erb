@@ -11,6 +11,19 @@
     <strong><font color="darkred">Creator:</font></strong>
   <%= @issue.creator.name %>
 </p>
+<div id="NotesList">
+    <p>
+        <strong>Notes:</strong>
+    </p>
+    <%= link_to "Add New Note", :controller => :notes, :action => "new", :issue_id => @issue %>
+    <br/>
+    <%@issue.notes.each do |note| %>
+        <div class="NoteShow">
+            <%= add_new_lines(note.message) %>
+        </div>
+    <%end %>
+
+</div>
 <hr/>
 <div id="ShowActionsMenu">
     <ul>

@@ -1,11 +1,13 @@
 class NotesController < ApplicationController
   def new
+    @issue_id = params[:issue_id]
     @note = Note.new
   end
   def create
     @note = Note.new(note_params)
     if @note.save!
-      redirect_to :welcome, notice: "Note has been created"
+      @issue = Issue.find_by_id(@note.issue_id)
+      redirect_to @issue, notice: "Note has been created"
     else
       redirect_to :welcome, notice: "Note has not been created"
     end

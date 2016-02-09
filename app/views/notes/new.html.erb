@@ -12,11 +12,15 @@
     <% end %>
         <div class="field">
             <%= f.label :message %><br>
-            <%= f.text_field :message %>
+            <%= f.text_area :message , size: '50x10'%>
         </div>
 
         <div class="field">
             <%= f.hidden_field :user_id, :value => @current_user.id %>
+        </div>
+
+        <div class="field">
+            <%= f.hidden_field :issue_id, :value => @issue_id %>
         </div>
         <div class="actions">
             <%= f.submit %>
