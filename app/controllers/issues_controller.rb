@@ -5,7 +5,7 @@ class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.json
   def index
-    @issues = Issue.order(:title)
+    @issues = Issue.order( 'updated_at DESC')
   end
 
   # GET /issues/1

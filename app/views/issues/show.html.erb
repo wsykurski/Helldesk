@@ -20,6 +20,13 @@
     <%@issue.notes.each do |note| %>
         <div class="NoteShow">
             <%= add_new_lines(note.message) %>
+            <% if user = User.find_by_id(note.user_id) %>
+                <hr/>
+                <p>
+                    <%= add_new_lines(user.name) %>
+                    <%= note.created_at %>
+                </p>
+            <% end %>
         </div>
     <%end %>
 

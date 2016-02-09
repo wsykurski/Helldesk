@@ -7,6 +7,8 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     if @note.save!
       @issue = Issue.find_by_id(@note.issue_id)
+      @issue.update(updated_at: Time.now)
+      @issue.save
       redirect_to @issue, notice: "Note has been created"
     else
       redirect_to :welcome, notice: "Note has not been created"
