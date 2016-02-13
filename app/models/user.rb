@@ -2,7 +2,9 @@ require 'digest/sha2'
 
 class User < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
-  validates :password, :confirmation => true
+  validates :password, :confirmation => true,
+            :length => { minimum: 6}
+  validates :password_confirmation, :presence => true, :on => :create
   attr_accessor :password_confirmation
   attr_reader :password
   validate :password_must_be_present
