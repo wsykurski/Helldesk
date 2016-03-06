@@ -10,6 +10,6 @@ unless u.nil?
   u.delete
 end
 
-User.create name: 'admin', email: 'admin@admin.com',
-            password: 'zaq12WSX', password_confirmation: 'zaq12WSX',
-            admin:true
+User.create(name: 'admin', email: 'admin@admin.com', 
+            password: 'zaq12WSX', password_confirmation: 'zaq12WSX', 
+            admin:true)
